@@ -1,20 +1,11 @@
-<?php
-
-session_start();
-include 'config.php'; // Ensure database connection
-
-?>
-
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-    <title>Employee Dashboard</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <div class="container">
         <h2>New Employee Registration</h2>
@@ -55,6 +46,13 @@ include 'config.php'; // Ensure database connection
                     <small style="color: #666;">Format: 10 to 15 digits.</small>
                 </div>
 
+                <div class="field-group">
+                    <label for="phone">Phone Number</label>
+                    <!-- Input a valid number (using tel type for mobile keyboards) -->
+                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                    <small style="color: #666;">Format: 10 to 15 digits.</small>
+                </div>
+
             </div>
 
             <!-- Message box for JavaScript validation errors -->
@@ -69,3 +67,4 @@ include 'config.php'; // Ensure database connection
     <!-- Link the JavaScript file -->
     <script src="script.js"></script>
 </body>
+</html>
