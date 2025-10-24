@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Form Challenge</title>
+    <!-- <style>
+        body { font-family: sans-serif; max-width: 400px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        select, input[type="text"] { width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+    </style> -->
+</head>
+<body>
+
+    <h2>Address Details</h2>
+
+    <form id="addressForm">
+        <div class="form-group">
+            <label for="region">Region</label>
+            <select id="region" name="region" required>
+                <option value="" disabled selected>Select Region</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="city">City/Municipality (Province)</label>
+            <select id="city" name="city" required disabled>
+                <option value="" disabled selected>Select Region first</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="barangay">Barangay</label>
+            <input type="text" id="barangay" name="barangay" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bldg_num">Building Number</label>
+            <input type="text" id="bldg_num" name="bldg_num">
+        </div>
+
+        <div class="form-group">
+            <label for="street">Street</label>
+            <input type="text" id="street" name="street" required>
+        </div>
+        
+        <button type="submit">Submit Address</button>
+    </form>
+
+    <script>
+        // === CHALLENGE DATA (Regions and Provinces) ===
+        // Using a flat array structure for data is standard, 
+        // though reorganizing it slightly makes the JavaScript lookup easier.
+        const regionsData = [
+            {"region_id": 1, "region_name": "NCR", "region_description": "National Capital Region"},
+            {"region_id": 2, "region_name": "CAR", "region_description": "Cordillera Administrative Region"},
+            {"region_id": 3, "region_name": "Region I", "region_description": "Ilocos Region"},
+            {"region_id": 6, "region_name": "Region IV-A", "region_description": "CALABARZON"},
+            // Only including the 4 regions needed for the demonstration
+        ];
+
+        const provincesData = [
+            {"province_id": 1, "region_id": 1, "province_name": "Metro Manila"},
+            {"province_id": 18, "region_id": 6, "province_name": "Batangas"},
+            {"province_id": 19, "region_id": 6, "province_name": "Cavite"},
+            {"province_id": 20, "region_id": 6, "province_name": "Laguna"},
+            {"province_id": 21, "region_id": 6, "province_name": "Quezon"},
+            {"province_id": 22, "region_id": 6, "province_name": "Rizal"},
+            {"province_id": 67, "region_id": 2, "province_name": "Abra"},
+            {"province_id": 68, "region_id": 2, "province_name": "Benguet"},
+            {"province_id": 69, "region_id": 2, "province_name": "Ifugao"},
+            {"province_id": 70, "region_id": 2, "province_name": "Kalinga"},
+            {"province_id": 71, "region_id": 2, "province_name": "Mountain Province"},
+            {"province_id": 72, "region_id": 2, "province_name": "Apayao"},
+            {"province_id": 2, "region_id": 3, "province_name": "Ilocos Norte"},
+            {"province_id": 3, "region_id": 3, "province_name": "Ilocos Sur"},
+            {"province_id": 4, "region_id": 3, "province_name": "La Union"},
+            {"province_id": 5, "region_id": 3, "province_name": "Pangasinan"},
+            // Add more province data for the selected regions as needed
+        ];
+
+        // Challenge requirement: Limit to ONLY these 4 regions (NCR, CALABARZON, CAR, Region I)
+        const allowedRegionNames = ["NCR", "Region IV-A", "CAR", "Region I"];
+        
+        // Filter the region data to include only the allowed ones
+        const filteredRegions = regionsData.filter(region => allowedRegionNames.includes(region.region_name));
+
+        // Create a Map for easy lookup of provinces by region_id
+        const provincesByRegion = provincesData.reduce((acc, province) => {
+            if (!acc[province.region_id]) {
+                acc[province.region_id] = [];
+            }
+            acc[province.region_id].push(province);
+            return acc;
+        }, {});
+
+        // === DOM ELEMENTS ===
+        const regionSelect = document.getElementById('region');
+        const citySelect = document.getElementById('city');
+        const addressForm = document.getElementById('addressForm');
+
+        // === FUNCTIONS ===
+
+        /**
+         * Populates the Region dropdown with the filtered region data.
+         */
+        function populateRegions() {
+            filteredRegions.forEach(region => {
+                const option = document.createElement('option');
+                option.value = region.region_id; 
+                option.textContent = `${region.region_name} - ${region.region_description}`;
+                regionSelect.appendChild(option);
+            });
+        }
+
+        /**
+         * Dynamically populates the City/Municipality dropdown based on the selected region.
+         */
+        function handleRegionChange() {
+            const selectedRegionId = regionSelect.value;
+
+            // Clear previous options
+            citySelect.innerHTML = '<option value="" disabled selected>Select City/Municipality (Province)</option>';
+            citySelect.disabled = true;
+
+            if (selectedRegionId) {
+                // Get the provinces (cities/municipalities) for the selected region ID
+                const provinces = provincesByRegion[selectedRegionId];
+                
+                if (provinces && provinces.length > 0) {
+                    citySelect.disabled = false;
+                    
+                    // Group the cities/municipalities by province (simulating the interactivity)
+                    // The prompt requests using grouped options. Since the current data structure
+                    // only goes down to the Province level, we'll use <optgroup> to show 
+                    // the relationship clearly.
+
+                    // Get the selected region's name for the optgroup label
+                    const selectedRegion = filteredRegions.find(r => r.region_id == selectedRegionId);
+                    const groupLabel = selectedRegion ? selectedRegion.region_name : 'Cities';
+                    
+                    const optgroup = document.createElement('optgroup');
+                    optgroup.label = groupLabel;
+
+                    // Note: The data you provided is only at the Province level.
+                    // For a real-world scenario, you would have a 'cities' array linked to each 'province_id'.
+                    // Since the challenge is to use the provided data, we'll treat the provinces 
+                    // as the selectable *major areas* for simplicity, using <optgroup> as the simulated link.
+
+                    provinces.forEach(province => {
+                        // For Metro Manila (region_id 1), the "province" is Metro Manila itself, 
+                        // so we can list common major cities here for better simulation:
+                        if (province.region_id === 1) {
+                            const metroCities = [
+                                "Quezon City", "Manila City", "Makati City", "Pasig City", "Marikina City"
+                            ];
+                            metroCities.forEach(city => {
+                                const option = document.createElement('option');
+                                option.value = city;
+                                option.textContent = city;
+                                optgroup.appendChild(option);
+                            });
+                        } else {
+                            // For other regions, we treat the province name as the immediate selectable area
+                            const option = document.createElement('option');
+                            option.value = province.province_name;
+                            option.textContent = province.province_name;
+                            optgroup.appendChild(option);
+                        }
+                    });
+
+                    citySelect.appendChild(optgroup);
+
+                } else {
+                    const option = document.createElement('option');
+                    option.value = "";
+                    option.textContent = "No cities/provinces found.";
+                    citySelect.appendChild(option);
+                }
+            }
+        }
+
+        // === EVENT LISTENERS & INITIALIZATION ===
+
+        // 1. Populate the initial Region dropdown
+        populateRegions();
+
+        // 2. Add listener to handle the "cascading" city/municipality change
+        regionSelect.addEventListener('change', handleRegionChange);
+        
+        // 3. Optional: Example form submission
+        addressForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+            console.log("Submitted Address Data:", data);
+            alert(`Address Saved for Region ID: ${data.region} (${regionSelect.options[regionSelect.selectedIndex].textContent.split(' - ')[0]})`);
+        });
+
+    </script>
+</body>
+</html>

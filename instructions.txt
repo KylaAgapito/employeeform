@@ -1,0 +1,42 @@
+Challenge Requirement for ADDRESS Section (JavaScript):
+	• For the Region dropdown, limit choices to ONLY 4 regions:
+	• Challenge rule: The City/Municipality field must change depending on the region chosen 
+    — but since this is HTML only, simulate this using grouped dropdown options instead of actual 
+    interactivity.
+
+So the content should be:
+Select region
+Select City/Municipality
+
+Here is the data for 4 regions and their cities
+
+[
+  {
+    "region": "National Capital Region (NCR)",
+    "cities_or_municipalities": ["Manila", "Quezon City", "Makati", "Pasig", "Taguig"]
+  },
+  {
+    "region": "Region IV-A (CALABARZON)",
+    "cities_or_municipalities": ["Antipolo", "Calamba", "Batangas City", "Lucena", "Dasmariñas"]
+  },
+  {
+    "region": "Region VII (Central Visayas)",
+    "cities_or_municipalities": ["Cebu City", "Lapu-Lapu City", "Mandaue", "Tagbilaran", "Toledo"]
+  },
+  {
+    "region": "Region XI (Davao Region)",
+    "cities_or_municipalities": ["Davao City", "Tagum", "Panabo", "Digos", "Mati"]
+  }
+]
+
+
+
+Address:
+DROP DOWN
+Region -- NCR, CALABARZON, etc
+City -- Marikina City, Quezon City, etc.
+Barangay
+
+TEXT 
+Building Number
+Street

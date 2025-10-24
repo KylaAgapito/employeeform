@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Employee Registration Form</h2>
+        
+        <form id="registrationForm" action="process.php" method="POST">
+            
+            <div class="form-grid">
+                
+                <!-- 1. Full Name -->
+                <div class="field-group">
+                    <label>Full Name (First and Last)</label>
+                    <div class="name-fields">
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                    </div>
+                </div>
+
+                <!-- 2. Date of Birth -->
+                <div class="field-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                    <small>Date</small>
+                </div>
+
+                <!-- 3. Email -->
+                <div class="field-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@company.com" required>
+                </div>
+
+                <!-- 4. Phone Number -->
+                <div class="field-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" required>
+                    <small>Please enter a valid phone number</small>
+                </div>
+                
+                <!-- 5. Region (Populated by JS) -->
+                <div class="field-group">
+                    <label for="region">Region</label>
+                    <select id="region" name="region" required>
+                        <option value="" disabled selected>Select A Region</option>
+                    </select>
+                </div>
+
+                <!-- 6. City/Municipality (Dynamically updated by JS) -->
+                <div class="field-group">
+                    <label for="city_municipality">City/Municipality</label>
+                    <select id="city_municipality" name="city_municipality" required disabled>
+                        <option value="" disabled selected>Select A Region First</option>
+                    </select>
+                </div>
+                
+            </div>
+
+
+            <!-- Message box for JavaScript validation errors -->
+            <div id="validationMessage" class="message text-red hidden"></div>
+
+            <div class="submit-area pt-4">
+                <button type="submit">
+                    Submit Registration
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>New Employee Registration</h2>
+        <h2>Employee Registration Form</h2>
         
         <!-- Form submits to process.php -->
         <form id="registrationForm" action="process.php" method="POST">
@@ -20,15 +20,19 @@
                     <label>Full Name (First and Last)</label>
                     <div class="name-fields">
                         <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                        <!-- <small style="color: #666;">First Name</small> -->
                         <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                        <!-- <small style="color: #666;">Last Name</small> -->
                     </div>
                 </div>
 
                 <!-- 2. Date of Birth (Right Side) -->
                 <div class="field-group">
                     <label for="dob">Date of Birth</label>
+                    
                     <!-- Date Picker Input -->
                     <input type="date" id="dob" name="dob" required>
+                    <small style="color: #666;">Date</small>
                 </div>
 
                 <!-- 3. Email (Left Side) -->
@@ -42,29 +46,57 @@
                 <div class="field-group">
                     <label for="phone">Phone Number</label>
                     <!-- Input a valid number (using tel type for mobile keyboards) -->
-                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
-                    <small style="color: #666;">Format: 10 to 15 digits.</small>
+                    <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" required>
+                    <small style="color: #666;">Please enter a valid phone number</small>
                 </div>
 
                 <div class="field-group">
-                    <label for="phone">Phone Number</label>
-                    <!-- Input a valid number (using tel type for mobile keyboards) -->
-                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
-                    <small style="color: #666;">Format: 10 to 15 digits.</small>
+                    <label for="region">Region</label>
+                    <select id="region" name="region">
+                        <option value="" disabled selected>Select A Region</option>
+                    </select>
                 </div>
 
+                <div class="field-group">
+                    <label for="province">City/Municipality</label>
+                    <select id="province" name="province">
+                        <option value="" disabled selected>Select A Province</option>
+                    </select>
+                </div>
+
+                <!-- <div class="field-group">
+                    <label for="position">Applying Position</label>
+                    <input type="text" id="position" name="position">
+                </div>
+
+                <div class="field-group">
+                    <label for="worktype">Type of Work</label>
+                    <input type="radio" id="permanent" name="permanent" value="permanent">
+                    <label for="permanent">Permanent</label>
+                    <input type="radio" id="temporary" name="temporary" value="temporary">
+                    <label for="temporary">Temporary</label>
+                    <input type="radio" id="both" name="both" value="both">
+                    <label for="both">Both</label>
+                    <input type="radio" id="other" name="other" value="other">
+                    <label for="other">Other</label>
+                </div> -->
+
             </div>
+
 
             <!-- Message box for JavaScript validation errors -->
             <div id="validationMessage" class="message error"></div>
 
             <div class="submit-area">
-                <button type="submit">Register Employee</button>
+                <button type="submit">Submit</button>
             </div>
         </form>
     </div>
 
     <!-- Link the JavaScript file -->
-    <script src="script.js"></script>
+    <script src="script.js">
+
+        
+    </script>
 </body>
 </html>
