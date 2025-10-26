@@ -60,8 +60,28 @@
                     </select>
                 </div>
                 
-            </div>
 
+                <div class="field-group">
+                    <label for="position">Applying Position</label>
+                    <input type="text" id="position" name="position" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="worktype">Type of Work</label>
+                    <label>
+                        <input type="radio" id="permanent" name="worktype" required> Permanent
+                    </label>
+                    <label>
+                        <input type="radio" id="temporary" name="worktype" required> Temporary
+                    </label>
+                    <label>
+                        <input type="radio" id="both" name="worktype" required> Both
+                    </label>
+                    <label>
+                        <input type="radio" id="others" name="worktype" required> Others
+                    </label>
+                </div>
+            </div>
 
             <!-- Message box for JavaScript validation errors -->
             <div id="validationMessage" class="message text-red hidden"></div>

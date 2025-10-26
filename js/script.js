@@ -44,15 +44,15 @@
          * @param {string} regionId - The ID of the selected region (e.g., 'NCR'). // BASICALLY DECLARING THIS VARIABLE AS A PARAMETER FOR REGIONID
          */
         function populateCities(regionId) {
-            // // 1. Clear previous options
-            // citySelect.innerHTML = '<option value="" disabled selected>Select A City/Municipality</option>';
-            // citySelect.disabled = true; // Disable until cities are added
+            // 1. Clear previous options
+            citySelect.innerHTML = '<option value="" disabled selected>Select A City/Municipality</option>';
+            citySelect.disabled = true; // Disable until cities are added
 
-            // // If no region is selected, stop
-            // if (!regionId) {
-            //     citySelect.innerHTML = '<option value="" disabled selected>Select A Region First</option>';
-            //     return;
-            // }
+            // If no region is selected, stop
+            if (!regionId) {
+                citySelect.innerHTML = '<option value="" disabled selected>Select A Region First</option>';
+                return;
+            }
 
             // 2. Find the corresponding region data
             const selectedRegion = regionData.find(item => item.id === regionId);
@@ -78,6 +78,15 @@
             const selectedRegionId = event.target.value;
             populateCities(selectedRegionId);
         });
+
+const radios = document.querySelectorAll('.field-group input [type="radio"]');
+radios.forEach(radio => {
+    radio.addEventListener('change', () =>{
+        radios.forEach(other=>{
+            if(other !== radio) other.checked=false;
+        })
+    })
+})        
 
         // --- Initialization and Validation ---
         

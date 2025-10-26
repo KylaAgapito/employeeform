@@ -1,0 +1,89 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ffffcc;
+    color: #330000;
+}
+.container {
+    border: 1vw solid black;
+}
+
+.content {
+  width: 30%;
+  display: flex;
+}
+
+.title {
+    background-color: #ccaa66;
+    border: 1vw solid black;
+    text-align: center;
+}
+.footer {
+    background-color: #ccaa66;
+    border: 1vw solid black;
+    text-align: center;
+}
+
+.footer #copyright {
+    font-style: italic;
+}
+
+.footer #email {
+    color:blue;
+    font-style: italic;
+    text-decoration: underline;
+    
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 10px; 
+  border-style: dotted;
+  border-color: pink;
+}
+
+td {
+  text-align: center;
+}
+
+#table-company {
+  background-color: pink;
+  width: 24%;
+}
+
+#table-contact {
+  background-color: navy;
+  color: white;
+  width: 24%;
+}
+
+#table-state {
+  background-color: green;
+  color: yellow;
+  width: 24%;
+}
+
+
+/* a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+} */

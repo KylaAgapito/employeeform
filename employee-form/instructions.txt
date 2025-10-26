@@ -40,3 +40,30 @@ Barangay
 TEXT 
 Building Number
 Street
+
+
+
+
+
+
+
+===============
+
+1. Set the region data with the following details
+id
+region
+cities IN ARRAY ["", ""]
+
+2. getElementById for both region and city_municipality
+
+3. populate regions using forEach
+
+4. set a regionId parameter
+
+5. create the core functions:
+    clear prev options
+    if no region is chosen beforehand, you will indicate for the city/municipality to select a region first
+    then if okay lahat ng conditions above, do this:
+        find the corresponding region data
+        populate the cities
+        enable city dropdown
