@@ -1,0 +1,57 @@
+{
+  "ncr": [
+    {
+        "value": "manila", "label": "Manila City" 
+    },
+    { 
+        "value": "marikina", "label": "Marikina City" 
+    },
+    { 
+        "value": "pasay", "label": "Pasay City" 
+    },
+    { 
+        "value": "quezon-city", "label": "Quezon City" 
+    }],
+
+  "region4a": [
+    {
+        "value": "antipolo", "label": "Antipolo City"
+    },
+    {
+        "value": "batangas", "label": "Batangas City"
+    },
+    {
+        "value": "cavite", "label": "Cavite City"
+    },
+    {
+        "value": "dasmarinas", "label": "Dasmariñas City"
+    }],
+
+  "region3": [
+    {
+        "value":"baliwag", "label": "Baliwag City"
+    },
+    {
+        "value": "malolos", "label": "Malolos City"
+    },
+    {
+        "value": "san-jose-del-monte", "label": "San Jose Del Monte City"
+    },
+    {
+        "value": "tarlac", "label": "Tarlac City"
+    }],
+
+  "car": [
+    { 
+        "value": "baguio", "label": "Baguio City" 
+    },
+    { 
+        "value": "barlig", "label": "Barlig" 
+    },
+    { 
+        "value": "la-trinidad", "label": "La Trinidad" 
+    },
+    { 
+        "value": "bangued", "label": "Bangued" 
+    }]
+}

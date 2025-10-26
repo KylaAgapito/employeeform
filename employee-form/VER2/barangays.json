@@ -1,0 +1,117 @@
+{
+  "manila": [
+    { "value": "barangay-287", "label": "Barangay 287" },
+    { "value": "barangay-659", "label": "Barangay 659" },
+    { "value": "barangay-654", "label": "Barangay 654" },
+    { "value": "barangay-688", "label": "Barangay 688" },
+    { "value": "barangay-662", "label": "Barangay 662" }
+  ],
+  "marikina": [
+    { "value": "barangka", "label": "Barangka" },
+    { "value": "calumpang", "label": "Calumpang" },
+    { "value": "concepcion-uno", "label": "Concepcion Uno" },
+    { "value": "fortune", "label": "Fortune" },
+    { "value": "jesus-de-la-pena", "label": "Jesus Dela Pena" }
+  ],
+  "pasay": [
+    { "value": "libertad", "label": "Libertad" },
+    { "value": "newport-city", "label": "Newport City" },
+    { "value": "rotonda", "label": "Rotonda" },
+    { "value": "padre-burgos", "label": "Padre Burgos" },
+    { "value": "tramo", "label": "Tramo" }
+  ],
+  "quezon-city": [
+    { "value": "damar", "label": "Damar" },
+    { "value": "damayan", "label": "Damayan" },
+    { "value": "katipunan", "label": "Katipunan" },
+    { "value": "alicia", "label": "Alicia" },
+    { "value": "lourdes", "label": "Lourdes" }
+  ],
+
+  "antipolo": [
+    { "value": "bagong-nayon", "label": "Bagong Nayon" },
+    { "value": "beverly-hills", "label": "Beverly Hills" },
+    { "value": "mambugan", "label": "Mambugan" },
+    { "value": "calawis", "label": "Calawis" },
+    { "value": "cupang", "label": "Cupang" }
+  ],
+  "batangas": [
+    { "value": "bagong-sikat", "label": "Bagong Sikat" },
+    { "value": "san-agustin", "label": "San Agustin" },
+    { "value": "don-luis", "label": "Don Luis" },
+    { "value": "sampaga", "label": "Sampaga" },
+    { "value": "munting-tubig", "label": "Munting Tubig" }
+  ],
+  "cavite": [
+    { "value": "amuyong", "label": "Amuyong" },
+    { "value": "esperanza-ilaya", "label": "Esperanza Ilaya" },
+    { "value": "victoria-reyes", "label": "Victoria Reyes" },
+    { "value": "tua", "label": "Tua" },
+    { "value": "pacheco", "label": "Pacheco" }
+  ],
+  "dasmarinas": [
+    { "value": "burol", "label": "Burol" },
+    { "value": "san-simon", "label": "San Simon" },
+    { "value": "santa-fe", "label": "Santa Fe" },
+    { "value": "san-roque", "label": "San Roque" },
+    { "value": "santa-lucia", "label": "Santa Lucia" }
+  ],
+
+  "baliwag": [
+    { "value": "tangos", "label": "Tangos" },
+    { "value": "pinagbarilan", "label": "Pinagbarilan" },
+    { "value": "sulivan", "label": "Sulivan" },
+    { "value": "sabang", "label": "Sabang" },
+    { "value": "tiaong", "label": "Tiaong" }
+  ],
+  "malolos": [
+    { "value": "bangkal", "label": "Bangkal" },
+    { "value": "balite", "label": "Balite" },
+    { "value": "balayong", "label": "Balayong" },
+    { "value": "atlag", "label": "Atlag" },
+    { "value": "bagong-bayan", "label": "Bagong Bayan" }
+  ],
+  "san-jose-del-monte": [
+    { "value": "poblacion", "label": "Población" },
+    { "value": "graceville", "label": "Graceville" },
+    { "value": "duelong-bayan", "label": "Duelong Bayan" },
+    { "value": "maharlika", "label": "Maharlika" },
+    { "value": "san-manuel", "label": "San Manuel" }
+  ],
+  "tarlac": [
+    { "value": "aguso", "label": "Aguso" },
+    { "value": "abagon", "label": "Abagon" },
+    { "value": "abogado", "label": "Abogado" },
+    { "value": "aduas", "label": "Aduas" },
+    { "value": "alfonso", "label": "Alfonso" }
+  ],
+
+  "baguio": [
+    { "value": "asin-road", "label": "Asin Road" },
+    { "value": "ambiong", "label": "Ambiong" },
+    { "value": "balsigan", "label": "Balsigan" },
+    { "value": "brookside", "label": "Brookside" },
+    { "value": "brookspoint", "label": "Brookspoint" }
+  ],
+  "bangued": [
+    { "value": "agtangao", "label": "Agtangao" },
+    { "value": "angad", "label": "Angad" },
+    { "value": "cabuloan", "label": "Cabuloan" },
+    { "value": "calaba", "label": "Calaba" },
+    { "value": "lingtan", "label": "Lingtan" }
+  ],
+  "la-trinidad": [
+    { "value": "alno", "label": "Alno" },
+    { "value": "bahong", "label": "Bahong" },
+    { "value": "balili", "label": "Balili" },
+    { "value": "beckel", "label": "Beckel" },
+    { "value": "pico", "label": "Pico" }
+  ],
+  "barlig": [
+    { "value": "chupac", "label": "Chupac" },
+    { "value": "latang", "label": "Latang" },
+    { "value": "kaleo", "label": "Kaleo" },
+    { "value": "gawana", "label": "Gawana" },
+    { "value": "ogoog", "label": "Ogoog" }
+  ]
+}

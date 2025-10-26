@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.form-container {
+    max-width: 80%; 
+    margin: 50px auto; 
+    padding: 30px; 
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.content form .user-details{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contents form .user-details .input-field{
+    display: flex;
+    flex-direction:column;
+    width: calc(100% / 2 - 5px);
+}
+
+.input-field input{
+    margin-top:5px;
+    height: 45px;
+    width: 93%;
+    outline:none;
+    font-size:16px;
+    border-radius:5px;
+    padding-left:15px;
+    line-height: 45px; /* vertically center single-line input text */
+    border:1px solid #ccc;
+    border-bottom-width:2px;
+    transition: all 0.3s ease;
+}
+
+/* Style select elements to match inputs */
+.input-field select,
+select{
+    margin-top:5px;
+    height: 45px;
+    width: 93%;
+    outline:none;
+    font-size:16px;
+    border-radius:5px;
+    padding-left:15px;
+    border:1px solid #ccc;
+    border-bottom-width:2px;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.input-field select:disabled{
+    color: #888;
+    background: #f5f5f5;
+}
+
+.input-field input:focus{
+    border-color:#9b59b6;
+    box-shadow: 0 0px 0px rgb(0, 21, 255);
+}
+
+/* invalid input state */
+.input-field input.invalid{
+    border-color: #e74c3c;
+}
+.input-field input.invalid + span{
+    color: #e74c3c;
+}
+
+
+
+::placeholder{
+    color: #999;
+    opacity: 1; 
+}
+
+input#dob::placeholder{
+    text-transform: uppercase;
+}
+
+.contents form .user-details{
+    display:flex;
+    flex-wrap:wrap;
+}
+ /* NAME FIELD*/
+.user-details .fn-field{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 93%;
+}
+.user-details .input-field>span{
+    display: flex;
+    flex-direction:column;
+    width: calc(100% / 2 - 5px);
+}
+
+.fn-labels{
+    display: flex;
+    justify-content: space-between;
+    width: 88%; 
+    margin-top: 2px;
+}
+
+.fn-label{
+    width: 45%; 
+    color: #666;
+    font-size: 14px;
+    margin-left: 3px; 
+}
+#first-name,
+#last-name{
+    border-radius: 6px;
+    margin-top: 5px;
+    width: 48%;
+}
+
+ /* DOB FIELD*/
+#dob{
+    border-radius: 6px;
+    margin-top: 5px;
+    width: 93%
+}
+
+
+#region, #cities, #province{
+    border-radius: 6px;
+    margin-top: 5px;
+    height: 45px;
+    width: 93%;
+    outline:none;
+    padding-left: 10px;
+    font-size:16px;
+    border:1px solid #ccc;
+    border-bottom-width:2px;
+    transition: all 0.3s ease;
+}
+
+span{
+    margin-top: 3px;
+    font-size: 16px;
+    color: #666;
+    margin-left: 3px;
+}
+.work-radio-field{
+    display:flex;
+    flex-direction:column;
+    width: 100%;
+}
+
+.cv-field{
+    display:flex;
+    flex-direction:column;
+    width: 98%;
+    margin-top: 10px;
+}
+
+.cv-container{
+    min-height:160px;
+    border: 2px dashed #ccc;
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    margin-top: 5px;
+}
+.additional-field{
+    display:flex;
+    flex-direction:column;
+    width: 98%;
+    margin-top: 10px;
+}
+
+.additional-field label{
+    font-size: 16px;
+    color: #000000;
+    margin-left: 3px;
+}
+
+#additional-info{
+    border-radius: 6px;
+    margin-top: 5px;
+    min-height: 150px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    resize: vertical; 
+}
+#permanent-work, #temporary-work, #both-work, #other-work{
+    width: 19px;
+    height: 19px;
+}
+
+
+.radio-group{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-top: 6px;
+}
+.radio{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px; 
+    font-size: 16px;
+    color: #000;
+}
+
+
+.applying-field{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#position{
+    border-radius: 6px;
+    margin-top: 5px;
+    height: 45px;
+    width: 35%;
+    outline:none;
+    font-size:16px;
+    border:1px solid #ccc;
+    border-bottom-width:2px;
+    transition: all 0.3s ease;
+    padding-left: 15px;
+}
+
+.work-radio-field{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.veteran-field input[type="radio"],
+.gender-field input[type="radio"],
+.disabilities-field input[type="radio"],
+.race-field input[type="radio"]{
+    width: 19px;
+    height: 19px;
+    vertical-align: middle;
+    margin-right: 8px; 
+}
+
+
+.veteran-field .radio,
+.gender-field .radio,
+.disabilities-field .radio,
+.race-field .radio{
+    align-items: center;
+}
+
+
+.veteran-field{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.gender-field{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.disabilities-field{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.additional-notes{
+    display:flex;
+    flex-direction:column;
+    width: 98%;
+    margin-top: 10px;
+}
+
+.additional-notes label{
+    font-size: 16px;
+    color: #000000;
+    margin-left: 3px;
+}
+
+#additional-notes-text{
+    border-radius: 6px;
+    margin-top: 5px;
+    min-height: 150px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    resize: vertical;  
+}
+
+.race-field{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.title{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+
+.submit-button{
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.submit-button input[type="submit"]{
+    background-color: #28a745; 
+    color: #fff;
+    width: 20%;
+    border: none;
+    padding: 12px 28px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.08s ease;
+}
+.submit-button input[type="submit"]:hover{
+    background-color: #218838;
+}
+.submit-button input[type="submit"]:active{
+    transform: translateY(1px);
+}

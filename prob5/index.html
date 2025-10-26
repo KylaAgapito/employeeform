@@ -1,0 +1,61 @@
+<!-- You’re designing a website’s navigation menu. Using an unordered list, the ul element has an 
+ID of main-menu and each menu item is contained in a list element that includes an anchor tag 
+for the link. You plan to style these links differently to make the menu stand out from the 
+other links on the site. Write the CSS selector that specifically targets only the anchor tags 
+that are inside list items which themselves are inside the element with the ID main-menu. 
+
+ -->
+
+<!-- pwede rin to actually  -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 4</title>
+    <style>
+        #main-menu > a {
+            color: blue;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ul">
+        <ul id="main-menu">
+            <a href=""> <li>Home</li> </a>
+            <a href=""> <li>About</li> </a>
+            <a href=""> <li>Contact Us</li> </a>
+            
+        </ul>
+    </div>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 5</title>
+    <style>
+        #main-menu li a{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ul">
+        <ul id="main-menu">
+            <li> <a href="#"> Home </a> </li>
+            <li> <a href="#"> About </a> </li>
+            <li> <a href="#"> Contact Us </a> </li>
+        </ul>
+        <ul id="main-menu">
+            <li> <a href="#"> Home </a> </li>
+            <li> <a href="#"> About </a> </li>
+        </ul>
+    </div>
+
+</body>
+</html>

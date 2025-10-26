@@ -1,0 +1,39 @@
+<!-- Suppose you are formatting an article page for a certain div section on multiple nested elements, 
+including paragraphs. You only want to apply a specific style paragraph that are directly inside a
+div with the ID content and not to paragraphs nested within other elements inside that div. Write 
+the CSS selector that will target only paragraph elements that are direct child of the div element with
+the ID content. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Problem 3</title>
+    <style>
+        .pg2 p {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <div class="hd1" id="hd1">
+            <h1>Hello!1</h1>
+            <h2>Hello!2</h2>
+            <h3>Hello!3</h3>
+        </div>
+        <div class="pg2" id="pg2">
+            <p>Hello!4</p>
+            <p>Hello!5</p>
+            <p>Hello!6</p>
+        </div>
+        <div class="pg3" id="pg3">
+            <p>Hello!7</p>
+            <p>Hello!8</p>
+            <p>Hello!9</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

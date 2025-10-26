@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <div class="title">Employee Registration Form</div>
+        <br>
+        <div class="contents">
+         <form action="#">
+            <div class="user-details">
+                <!--NAME FIELD-->
+                <div class="input-field">
+                    <label for="full-name">Full Name</label>
+                    <div class="fn-field">
+                        <input type="text" id="first-name" name="firstname-input">
+                        <input type="text" id="last-name" name="lastname-input">
+                    </div>
+                    <div class="fn-labels">
+                        <span class="fn-label">First Name</span>
+                        <span class="fn-label">Last Name</span>
+                    </div>
+                    <br>
+                </div>
+                <!--DOB FIELD-->
+                <div class="input-field">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob-input" placeholder="MM/DD/YYYY" maxlength="10">
+                    <span>Date</span>
+                </div>
+                <!--EMAIL FIELD-->
+                <div class="input-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email-input" required>
+                    <span>example@example.com</span>
+                </div>
+                <!--PHONE NUMBER FIELD-->
+                <div class="input-field">
+                    <label for="phone-number">Phone Number</label>
+                    <input type="text" id="phone-number" name="phone-input" placeholder="+(63) 917 123 4567" required maxlength="13">
+                    <span>Please Enter a Valid Number</span><br>
+                </div>
+                <!--ADDRESS FIELD-->
+                <div class="input-field">
+                    <label for="region">Region</label>         
+                    <select name="region" id="region" required>
+                        <option value="">Select a region</option>
+                        <option value="ncr">National Capital Region (NCR)</option>
+                        <option value="region4a">CALABARZON (Region IV-A)</option>
+                        <option value="region3">Central Luzon (Region III)</option>
+                        <option value="car">
+                            Cordillera Administrative Region (CAR)
+                        </option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="city">City/Municipality</label>
+                    <select name="cities" id="cities" disabled>
+                    </select><br>
+                </div>
+                <div class="input-field">
+                    <label for="province">Province</label>
+                    <select name="province" id="province" disabled>
+                        <option value="">Select a region first</option>
+                    </select>
+                    <br>
+                </div>
+                <div class="input-field">
+                    <label for="barangay">Barangay</label>
+                    <select name="barangays" id="barangay" disabled>
+                        <option value="">Select a city first.</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="street">Street/ House No.</label>
+                    <input type="text" id="street" name="street-input"><br>
+                </div>
+                <div class="input-field">
+                    <label for="zip-code">Zip Code</label>
+                    <input type="text" id="zip-code" name="zip-input"><br>
+                </div>
+                <div class="applying-field">
+                    <label for="position">Applying Position</label>
+                    <input type="text" id="position" name="position-input"> <br>
+                </div>
+                <!--WORK FIELD-->
+                <div class="input-field">
+                    <label for="work-type">Type of Work</label>
+                    <div class="work-radio-field">
+                        <label class="radio"><input type="radio" id="permanent-work" name="work-type-input" value="Permanent-Work"> Permanent Work</label>
+                        <label class="radio"><input type="radio" id="temporary-work" name="work-type-input" value="Temporary-Work"> Temporary Work</label>
+                        <label class="radio"><input type="radio" id="both-work" name="work-type-input" value="Both-Work"> Both Work</label>
+                        <label class="radio"><input type="radio" id="other-work" name="work-type-input" value="Other-Work"> Other</label><br>
+                    </div>
+                </div>
+                <!--CV UPLOAD FIELD-->
+                <div class="cv-field">
+                    <label for="cv-upload">Upload CV</label>
+                    <div class="cv-container">
+                        <input type="file" id="cv-upload" name="cv-input"><br>
+                    </div>
+                </div>
+                <!--ADDITIONAL INFORMATION FIELD-->
+                <div class="additional-field">
+                    <label for="additional-info">Cover Letter or Additional Information</label>
+                    <textarea id="additional-info" name="additional-info" rows="4" cols="50" placeholder="Enter any additional information here..."></textarea><br>
+                </div>
+                <!--VETERANS FIELD-->
+                <div class="veteran-field">
+                    <label for="veteran-status">Veteran Status</label>
+                    <label class="radio"><input type="radio" id="veteran" name="veteran-status" value="veteran"> I am a veteran</label>
+                    <label class="radio"><input type="radio" id="separated-veteran" name="veteran-status" value="separated-veteran"> I am recently separated veteran</label>
+                    <label class="radio"><input type="radio" id="not-veteran" name="veteran-status" value="not-veteran"> I am not a veteran</label>
+                    <label class="radio"><input type="radio" id="pwd-veteran" name="veteran-status" value="pwd-veteran"> I am a special disabled veteran</label>
+                    <label class="radio"><input type="radio" id="protected-veteran" name="veteran-status" value="protected-veteran">I am an other protected veteran</label>
+                    <label class="radio"><input type="radio" id="prefer-not-to-say" name="veteran-status" value="prefer-not-to-say"> Prefer not to say</label><br>
+                </div>
+                <!--GENDER FIELD-->
+                <div class="gender-field">
+                    <label for="gender">Gender</label>
+                    <label class="radio"><input type="radio" id="fenale" name="gender" value="female"> Female</label>
+                    <label class="radio"><input type="radio" id ="male" name="gender" value="male"> Male</label>
+                    <label class="radio"><input type="radio" id ="transgender-female" value="transgender-female"> Transgender Female</label>
+                    <label class="radio"><input type="radio" id ="transgender-male" value="transgender-male"> Transgender Male</label>
+                    <label class="radio"><input type="radio" id ="prefer-not-to-say" value="prefer-not-to-say"> Prefer Not to Answer</label>
+                    <label class="radio"><input type="radio" id ="other-gender" value="other-gender"> Not Listed</label><br>
+                </div>
+                <!--DISABILITIES FIELD-->
+                <div class="disabilities-field">
+                    <label for="disabilities">Disabilities</label>
+                    <label class="radio"><input type="radio" id ="no-disability" name="disabilities" value="no-disability"> I have no disability</label>
+                    <label class="radio"><input type=radio id ="more-disability" name="disabilities" value="more-disability">I have two or more impairments and/or disabling medical conditions</label>
+                    <label class="radio"><input type="radio" id="learning-disability" name="disabilities" value="learning-disability"> I have a specific learning difficulity (e.g. Dyslexia/Dyspraxia/ADHD)</label>
+                    <label class="radio"><input type="radio" id="social-disability" name="disabilities" value="social-disability"> I have a social/communication impairment such as Asperger's syndrome/other autistic specturm disorder</label>
+                    <label class="radio"><input type="radio" id="long-term-disability" name="disabilities" value="long-term-disability"> I have a long standing illness or health condition such as cancer, HIV, diabetes, chronic heart disease, or epilepsy</label>
+                    <label class="radio"><input type="radio" id="physical-disability" name="disabilities" value="physical-disability"> I have a physical impairment or mobility issues (e.g. difficulty using arms/using a wheelchair or crutches)</label>
+                    <label class="radio"><input type="radio" id="hearing-disability" name="disabilities" value="hearing-disability"> I am deaf or have a serious hearing impairment</label>
+                    <label class="radio"><input type="radio" id="visual-disability" name="disabilities" value="visual-disability"> I am blind or have a serious visual impairment uncorrected by glasses</label>
+                    <label class="radio"><input type="radio" id ="prefer-not-to-say" name="disabilities" value="prefer-not-to-say"> Prefer Not to Answer</label>
+                    <label class="radio"><input type="radio" id="other-disability" name="disabilities" value="other-disability"> I have a disability, impairment or medical condition not listed here</label><br>
+                </div>
+                <div class="race-field">
+                    <label for="race">Race</label>
+                    <label class="radio"><input type="radio" id="asian" name="race" value="asian"> Asian</label>
+                    <label class="radio"><input type="radio" id="black" name="race" value="black"> Black or African American</label>
+                    <label class="radio"><input type="radio" id="american-native" name="race" value="american-native">American Native or Alaska Native</label>
+                    <label class="radio"><input type="radio" id="white" name="race" value="white"> White</label>
+                    <label class="radio"><input type="radio" id="pacific-islander" name="race" value="pacific-islander"> Native Hawaiian or Other Pacific Islander</label>
+                    <label class="radio"><input type="radio" id="more-than-one" name="race" value="more-than-one"> Two or more races</label>
+                    <label class="radio"><input type="radio" id="prefer-not-to-say" name="race" value="prefer-not-to-say"> Decline to specifiy</label>
+                    <label class="radio"><input type="radio" id="other-race" name="race" value="other-race"> Other</label><br>
+                </div>
+                <div class="additional-notes">
+                    <label for="additional-notes">Additional Notes</label>
+                    <textarea id="additional-notes-text" name="additional-notes" rows="4" cols="50" placeholder="Enter any additional notes here..."></textarea><br>
+                </div>
+            </div>
+            <div class="submit-button">
+                    <input type="submit" value="Submit">
+            </div>
+         </form>   
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+    </html>

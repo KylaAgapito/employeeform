@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: maroon;
+  color: white;
+}
+
+.header img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header .campus {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  height: 100vh;            
+  flex-direction: column;   
+  text-align: center;
+}
+
+#hymn-title{
+  color: rgb(147, 4, 4);
+
+}
+#scroll-pane {
+  width: 500px;
+  height: 350px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: start; 
+  text-align: center;
+  
+}
+
+#scroll-pane::-webkit-scrollbar {
+  display: none;  
+}
+
+#lyrics td {
+  padding: 4px;
+  text-align: center;
+  cursor: pointer;  
+}
+
+.selected {
+  background-color: #ffd64fab;
+  font-weight: bold;
+}

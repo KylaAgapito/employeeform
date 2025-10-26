@@ -1,0 +1,46 @@
+{
+  "ncr-province": [
+    {
+      "value": "metro-manila",
+      "label": "Metro Manila"
+    }
+  ],
+  "region4a-province": [
+    {
+      "value": "rizal",
+      "label": "Rizal"
+    },
+    {
+      "value": "batangas",
+      "label": "Batangas"
+    },
+    {
+      "value": "cavite",
+      "label": "Cavite"
+    }
+  ],
+  "region3-province": [
+    {
+      "value": "bulacan",
+      "label": "Bulacan"
+    },
+    {
+      "value": "tarlac",
+      "label": "Tarlac"
+    }
+  ],
+  "car-province": [
+    {
+      "value": "benguet",
+      "label": "Benguet"
+    },
+    {
+      "value": "abra",
+      "label": "Abra"
+    },
+    {
+      "value": "mountain-province",
+      "label": "Mountain Province"
+    }
+  ]
+}

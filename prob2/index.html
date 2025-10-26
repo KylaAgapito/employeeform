@@ -1,0 +1,39 @@
+<!-- Imagine you’re styling a webpage for a school website. The main section of the page is wrapped inside 
+a div with the ID named content. You want all heading elements like h1, h2, etc., inside this section 
+to have a consistent text color and a subtle border to make them visually distinct. Write a CSS rule 
+that selects any heading element inside the div with the ID named content, sets its color to #3336699 
+and adds a bottom border that is 2 px, solid gray.  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src=""></script>
+    <style>
+            #content h1, 
+            #content h2, 
+            #content h3, 
+            #content h4, 
+            #content h5, 
+            #content h6 {
+                color: #336699; /* consistent text color */
+                border-bottom: 2px solid gray; /* subtle bottom border */
+            }
+    </style>
+</head>
+<body>
+    
+<div id="content">
+    <h1>Hello!</h1>
+    <h2>Hello!</h2>
+    <h3>Hello!</h3>
+    <h4>Hello!</h4>
+    <h5>Hello!</h5>
+    <h6>Hello!</h6>
+</div>
+
+</body>
+</html>
+
