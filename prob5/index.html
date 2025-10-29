@@ -3,10 +3,8 @@ ID of main-menu and each menu item is contained in a list element that includes 
 for the link. You plan to style these links differently to make the menu stand out from the 
 other links on the site. Write the CSS selector that specifically targets only the anchor tags 
 that are inside list items which themselves are inside the element with the ID main-menu. 
-
  -->
-
-<!-- pwede rin to actually  -->
+  
 <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +36,7 @@ that are inside list items which themselves are inside the element with the ID m
 <head>
     <title>Problem 5</title>
     <style>
-        #main-menu li a{
+        #main-menu>li>a{
             color: pink;
         }
     </style>
@@ -50,10 +48,6 @@ that are inside list items which themselves are inside the element with the ID m
             <li> <a href="#"> Home </a> </li>
             <li> <a href="#"> About </a> </li>
             <li> <a href="#"> Contact Us </a> </li>
-        </ul>
-        <ul id="main-menu">
-            <li> <a href="#"> Home </a> </li>
-            <li> <a href="#"> About </a> </li>
         </ul>
     </div>
 
